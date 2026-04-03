@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alcool de Viande — Premier spiritueux d'origine hépatique</title>
+  <meta name="description" content="Alcool de Viande. Spiritueux expérimental distillé à partir de glycogène de foie gras. Production ultra-limitée.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#" class="nav__logo">Alcool de Viande</a>
+      <ul class="nav__links">
+        <li><a href="#procede" data-i18n="nav.process">Le Procédé</a></li>
+        <li><a href="#matiere" data-i18n="nav.matter">La Matière</a></li>
+        <li><a href="#produit" data-i18n="nav.product">Le Produit</a></li>
+        <li><a href="#registre" data-i18n="nav.register">Registre</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="lang-toggle" id="langToggle">
+          <span class="lang-toggle__opt lang-toggle__opt--active" data-lang="fr">FR</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__over reveal" data-i18n="hero.over">Spiritueux expérimental · Production ultra-limitée</p>
+      <h1 class="hero__title reveal">
+        <span class="hero__title-line" data-i18n="hero.t1">Alcool</span>
+        <span class="hero__title-line hero__title-line--italic" data-i18n="hero.t2">de Viande</span>
+      </h1>
+      <p class="hero__sub reveal" data-i18n="hero.sub">
+        Premier spiritueux distillé à partir de glycogène hépatique de canard gras.<br>
+        Nous ne savons pas encore s'il est buvable.<br>
+        C'est précisément ce qui le rend fascinant.
+      </p>
+      <a href="#registre" class="btn btn--gold reveal" data-i18n="hero.cta">Inscription au registre</a>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- Statement -->
+  <section class="statement">
+    <div class="container">
+      <blockquote class="statement__quote reveal" data-i18n="statement.quote">
+        « On fermente le raisin depuis dix mille ans. On n'a jamais pensé 
+        à fermenter le foie gras. La question n'est pas <em>pourquoi</em>, 
+        mais <em>pourquoi pas</em>. »
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Le Procédé -->
+  <section class="section" id="procede">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__number">I</span>
+        <h2 class="section__title" data-i18n="proc.title">Le Procédé</h2>
+      </div>
+
+      <div class="process">
+        <div class="process__intro reveal">
+          <p data-i18n="proc.p1">
+            Le foie d'un canard gavé contient une réserve importante de glycogène — 
+            un polymère de glucose stocké dans les cellules hépatiques. C'est cette 
+            réserve énergétique, habituellement ignorée par la gastronomie, qui constitue 
+            notre matière première.
+          </p>
+          <p data-i18n="proc.p2">
+            Le procédé repose sur une cascade enzymatique en trois temps : dégradation 
+            du glycogène en glucose par des amylases hépatiques endogènes, fermentation 
+            alcoolique du moût glucosé, puis distillation lente en alambic de cuivre.
+          </p>
+        </div>
+
+        <div class="process__steps">
+          <div class="process__step reveal">
+            <span class="process__step-num">01</span>
+            <h3 data-i18n="proc.s1.t">Hydrolyse enzymatique</h3>
+            <p data-i18n="proc.s1.d">
+              Les foies gras crus sont broyés et incubés à 37°C avec leurs propres 
+              enzymes glycolytiques (glycogène phosphorylase, amylase hépatique). 
+              Le glycogène est progressivement converti en glucose libre. 
+              Rendement typique : 8 à 12 g de glucose par foie.
+            </p>
+          </div>
+          <div class="process__step reveal">
+            <span class="process__step-num">02</span>
+            <h3 data-i18n="proc.s2.t">Fermentation</h3>
+            <p data-i18n="proc.s2.d">
+              Le moût hépatique est ensemencé avec une souche de <em>Saccharomyces 
+              cerevisiae</em> sélectionnée pour sa tolérance aux acides gras. 
+              Fermentation lente à 18°C pendant 14 jours. Le résultat est un 
+              « vin de foie » titrant environ 4 à 5% vol.
+            </p>
+          </div>
+          <div class="process__step reveal">
+            <span class="process__step-num">03</span>
+            <h3 data-i18n="proc.s3.t">Distillation</h3>
+            <p data-i18n="proc.s3.d">
+              Double distillation en alambic charentais de cuivre de 50 litres. 
+              Coupe sévère : seul le cœur de chauffe est conservé. On obtient un 
+              distillat limpide, titrant entre 62 et 68% vol., au profil 
+              aromatique encore largement inexploré.
+            </p>
+          </div>
+        </div>
+
+        <div class="process__note reveal">
+          <p data-i18n="proc.note">
+            <strong data-i18n="proc.note.strong">Note de transparence :</strong> Ce procédé est expérimental. 
+            Aucune étude organoleptique formelle n'a encore été conduite. 
+            Les descripteurs aromatiques mentionnés sur ce site sont issus de 
+            micro-dégustations internes, non de panels certifiés. Nous publierons 
+            nos résultats analytiques complets lorsque le Lot 001 sera stabilisé.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La Matière -->
+  <section class="section section--dark" id="matiere">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__number">II</span>
+        <h2 class="section__title" data-i18n="mat.title">La Matière</h2>
+      </div>
+
+      <div class="matter">
+        <div class="matter__visual reveal">
+          <div class="matter__img-placeholder" aria-label="Foie gras cru entier"></div>
+        </div>
+        <div class="matter__content reveal">
+          <p class="matter__lead" data-i18n="mat.lead">
+            Il faut entre 30 et 40 foies gras de canard entiers pour produire 
+            une seule bouteille de 50 cl.
+          </p>
+          <p data-i18n="mat.p1">
+            Nos foies sont sourcés exclusivement auprès de producteurs du Gers 
+            et du Périgord, sélectionnés pour la qualité de leur gavage traditionnel 
+            au maïs grain entier. Un foie plus riche en glycogène donne un meilleur 
+            rendement en glucose — et donc un distillat plus généreux.
+          </p>
+          <p data-i18n="mat.p2">
+            Chaque foie est caractérisé individuellement par sa teneur en glycogène 
+            avant intégration au lot. Les foies présentant un taux inférieur à 
+            6% sont écartés et redirigés vers les circuits gastronomiques classiques.
+          </p>
+          <div class="matter__stat">
+            <div class="matter__stat-item reveal">
+              <span class="matter__stat-number">~35</span>
+              <span class="matter__stat-label" data-i18n="mat.stat1">foies gras par bouteille</span>
+            </div>
+            <div class="matter__stat-item reveal">
+              <span class="matter__stat-number">8-12g</span>
+              <span class="matter__stat-label" data-i18n="mat.stat2">de glucose par foie</span>
+            </div>
+            <div class="matter__stat-item reveal">
+              <span class="matter__stat-number">50cl</span>
+              <span class="matter__stat-label" data-i18n="mat.stat3">par lot de production</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Le Produit -->
+  <section class="section" id="produit">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__number">III</span>
+        <h2 class="section__title" data-i18n="prod.title">Le Produit</h2>
+      </div>
+
+      <div class="product">
+        <div class="product__visual reveal">
+          <div class="product__img-placeholder" aria-label="Bouteille Alcool de Viande Lot 001"></div>
+        </div>
+        <div class="product__details">
+          <div class="product__header reveal">
+            <span class="product__lot">LOT 001</span>
+            <h3 class="product__name" data-i18n="prod.name">Alcool de Viande — Eau-de-vie de foie gras</h3>
+          </div>
+
+          <div class="product__specs reveal">
+            <div class="product__spec">
+              <span class="product__spec-label" data-i18n="prod.spec1.l">Catégorie</span>
+              <span class="product__spec-value" data-i18n="prod.spec1.v">Eau-de-vie expérimentale d'origine hépatique</span>
+            </div>
+            <div class="product__spec">
+              <span class="product__spec-label" data-i18n="prod.spec2.l">Matière première</span>
+              <span class="product__spec-value" data-i18n="prod.spec2.v">Foie gras de canard cru, Gers & Périgord (IGP)</span>
+            </div>
+            <div class="product__spec">
+              <span class="product__spec-label" data-i18n="prod.spec3.l">Titre alcoolique visé</span>
+              <span class="product__spec-value">45% vol.</span>
+            </div>
+            <div class="product__spec">
+              <span class="product__spec-label" data-i18n="prod.spec4.l">Contenance</span>
+              <span class="product__spec-value">50 cl</span>
+            </div>
+            <div class="product__spec">
+              <span class="product__spec-label" data-i18n="prod.spec5.l">Production</span>
+              <span class="product__spec-value" data-i18n="prod.spec5.v">12 bouteilles (Lot 001)</span>
+            </div>
+            <div class="product__spec">
+              <span class="product__spec-label" data-i18n="prod.spec6.l">Statut</span>
+              <span class="product__spec-value product__spec-value--status" data-i18n="prod.spec6.v">En cours de stabilisation</span>
+            </div>
+          </div>
+
+          <div class="product__tasting reveal">
+            <h4 data-i18n="prod.tasting.title">Notes de dégustation préliminaires</h4>
+            <p class="product__tasting-disclaimer" data-i18n="prod.tasting.disc">(Micro-dégustation interne, non certifiée — à confirmer)</p>
+            <div class="product__tasting-grid">
+              <div class="product__tasting-note">
+                <span class="product__tasting-label" data-i18n="prod.tasting.nose">Nez</span>
+                <p data-i18n="prod.tasting.nose.d">Notes grasses et beurrées en attaque, évoluant vers des nuances de noisette torréfiée et de caramel blond. Fond légèrement animal, cuir fin.</p>
+              </div>
+              <div class="product__tasting-note">
+                <span class="product__tasting-label" data-i18n="prod.tasting.palate">Bouche</span>
+                <p data-i18n="prod.tasting.palate.d">Texture huileuse inhabituelle pour un spiritueux. Attaque douce, presque lactée. Milieu de bouche complexe, à la frontière du salé et du sucré. Finale longue, umami prononcé.</p>
+              </div>
+              <div class="product__tasting-note">
+                <span class="product__tasting-label" data-i18n="prod.tasting.finish">Finale</span>
+                <p data-i18n="prod.tasting.finish.d">Persistance aromatique remarquable (>40 secondes). Rémanence de beurre noisette et de bouillon concentré. Chaleur alcoolique mesurée.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__price-block reveal">
+            <div class="product__price-info">
+              <span class="product__price" data-i18n="prod.price">Prix sur demande</span>
+              <span class="product__price-note" data-i18n="prod.price.note">Allocation sur registre uniquement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coût de revient -->
+  <section class="section section--dark cost-section">
+    <div class="container">
+      <div class="cost reveal">
+        <h3 class="cost__title" data-i18n="cost.title">Pourquoi ce prix</h3>
+        <div class="cost__grid">
+          <div class="cost__item">
+            <span class="cost__label" data-i18n="cost.l1">Matière première (≈35 foies gras IGP)</span>
+            <span class="cost__value">≈ 1 750 €</span>
+          </div>
+          <div class="cost__item">
+            <span class="cost__label" data-i18n="cost.l2">Analyse glycogène individuelle par foie</span>
+            <span class="cost__value">≈ 280 €</span>
+          </div>
+          <div class="cost__item">
+            <span class="cost__label" data-i18n="cost.l3">Hydrolyse enzymatique & fermentation (14 jours)</span>
+            <span class="cost__value">≈ 320 €</span>
+          </div>
+          <div class="cost__item">
+            <span class="cost__label" data-i18n="cost.l4">Double distillation en alambic cuivre</span>
+            <span class="cost__value">≈ 180 €</span>
+          </div>
+          <div class="cost__item">
+            <span class="cost__label" data-i18n="cost.l5">Stabilisation, analyse & conditionnement</span>
+            <span class="cost__value">≈ 150 €</span>
+          </div>
+          <div class="cost__item cost__item--total">
+            <span class="cost__label" data-i18n="cost.total">Coût de revient estimé par bouteille</span>
+            <span class="cost__value">≈ 2 680 €</span>
+          </div>
+        </div>
+        <p class="cost__note" data-i18n="cost.note">
+          Ces chiffres n'incluent ni la R&D, ni le temps de travail, ni le 
+          conditionnement final. Ils reflètent uniquement le coût matière et 
+          process d'une bouteille de 50 cl au stade expérimental.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registre -->
+  <section class="section" id="registre">
+    <div class="container">
+      <div class="register reveal">
+        <span class="section__number">IV</span>
+        <h2 class="register__title" data-i18n="reg.title">Registre d'intérêt</h2>
+        <p class="register__desc" data-i18n="reg.desc">
+          Le Lot 001 est en cours de stabilisation. La production est limitée 
+          à 12 bouteilles. L'inscription au registre ne constitue pas un engagement 
+          d'achat — elle vous positionne pour être contacté en priorité si le 
+          produit est jugé apte à la dégustation.
+        </p>
+        <form class="register__form" onsubmit="event.preventDefault()">
+          <div class="register__fields">
+            <input type="text" placeholder="Nom" data-i18n-ph="reg.name" class="register__input" required>
+            <input type="email" placeholder="Email" class="register__input" required>
+          </div>
+          <button type="submit" class="btn btn--gold" data-i18n="reg.btn">S'inscrire au registre</button>
+        </form>
+        <p class="register__legal" data-i18n="reg.legal">
+          Aucun paiement requis. Vos données ne sont utilisées que pour vous 
+          contacter au sujet du Lot 001. Désincription à tout moment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">Alcool de Viande</span>
+          <p class="footer__tagline" data-i18n="footer.tagline">Premier spiritueux d'origine hépatique</p>
+        </div>
+        <div class="footer__links">
+          <a href="#procede" data-i18n="footer.l1">Le Procédé</a>
+          <a href="#matiere" data-i18n="footer.l2">La Matière</a>
+          <a href="#produit" data-i18n="footer.l3">Le Produit</a>
+          <a href="#registre" data-i18n="footer.l4">Registre</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.legal">
+          L'abus d'alcool est dangereux pour la santé. À consommer avec modération. 
+          Produit expérimental — non commercialisé à ce jour.
+        </p>
+        <p class="footer__copy">&copy; 2026 Alcool de Viande</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
