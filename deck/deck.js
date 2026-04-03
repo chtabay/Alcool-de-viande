@@ -19,6 +19,8 @@
     counterCurrent.textContent = current + 1;
     btnPrev.style.opacity = current === 0 ? 0.2 : 1;
     btnNext.style.opacity = current === total - 1 ? 0.2 : 1;
+
+    slides[current].scrollTop = 0;
   }
 
   btnPrev.addEventListener('click', () => goTo(current - 1));
@@ -31,16 +33,27 @@
     if (e.key === 'End') { e.preventDefault(); goTo(total - 1); }
   });
 
+  const SWIPE_THRESHOLD = 50;
+  const ANGLE_THRESHOLD = 30;
   let touchStartX = 0;
+  let touchStartY = 0;
 
   deck.addEventListener('touchstart', (e) => {
     touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
   }, { passive: true });
 
   deck.addEventListener('touchend', (e) => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) {
-      diff > 0 ? goTo(current + 1) : goTo(current - 1);
+    const dx = touchStartX - e.changedTouches[0].clientX;
+    const dy = touchStartY - e.changedTouches[0].clientY;
+    const absDx = Math.abs(dx);
+    const absDy = Math.abs(dy);
+
+    const isHorizontal = absDx > absDy && absDx > SWIPE_THRESHOLD;
+    const angleDeg = Math.atan2(absDy, absDx) * (180 / Math.PI);
+
+    if (isHorizontal && angleDeg < ANGLE_THRESHOLD) {
+      dx > 0 ? goTo(current + 1) : goTo(current - 1);
     }
   }, { passive: true });
 

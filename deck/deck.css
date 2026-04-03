@@ -45,8 +45,10 @@ html, body {
   position: relative;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--c-black);
+  -webkit-overflow-scrolling: touch;
 }
 
 /* ---- Overlays for bg images ---- */
@@ -92,8 +94,10 @@ html, body {
   position: relative;
   z-index: 1;
   padding: 4rem 5rem;
+  padding-bottom: 5rem;
   max-width: 100%;
   width: 100%;
+  align-self: flex-start;
 }
 
 .slide__body--center {
@@ -597,12 +601,19 @@ html, body {
   text-align: center;
 }
 
+/* ---- Table scroll wrapper ---- */
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
 
 @media (max-width: 1024px) {
-  .slide__body { padding: 3rem; }
+  .slide__body { padding: 3rem; padding-bottom: 5rem; }
 
   .slide__columns { grid-template-columns: 1fr; gap: 2rem; }
 
@@ -616,10 +627,255 @@ html, body {
 }
 
 @media (max-width: 640px) {
-  .slide__body { padding: 2rem 1.5rem; }
+  html, body {
+    overflow: hidden;
+  }
 
-  .slide__hero-title { font-size: clamp(2rem, 10vw, 3.5rem); }
+  .slide {
+    align-items: flex-start;
+  }
 
-  .slide__kpi-row { grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .slide__ask-grid { grid-template-columns: 1fr 1fr; }
+  .slide__body {
+    padding: 1.5rem 1rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .slide__body--center {
+    max-width: 100%;
+    padding-top: 3rem;
+  }
+
+  .slide__confidential {
+    font-size: 0.55rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .slide__label {
+    font-size: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .slide__title {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    margin-bottom: 1.2rem;
+  }
+
+  .slide__hero-title {
+    font-size: clamp(1.8rem, 9vw, 3rem);
+    margin-bottom: 1rem;
+  }
+
+  .slide__hero-title--small {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .slide__hero-sub {
+    font-size: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .slide__hero-tagline {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .slide__closing-line {
+    font-size: 1rem;
+  }
+
+  .slide__closing-contact {
+    font-size: 0.7rem;
+  }
+
+  /* Columns stacked */
+  .slide__columns { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  .slide__col p {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-bottom: 0.6rem;
+  }
+
+  .slide__note {
+    font-size: 0.72rem;
+    margin-top: 1rem;
+  }
+
+  /* Stats */
+  .slide__stat-num {
+    font-size: 1.3rem;
+  }
+
+  .slide__stat-label {
+    font-size: 0.68rem;
+  }
+
+  /* Big numbers */
+  .slide__big-num-value {
+    font-size: 1.6rem;
+  }
+
+  .slide__big-number--hero .slide__big-num-value {
+    font-size: 2rem;
+  }
+
+  .slide__big-num-label {
+    font-size: 0.62rem;
+  }
+
+  .slide__big-number {
+    padding: 0.8rem 0;
+  }
+
+  .slide__big-number--hero {
+    padding: 1rem 0;
+  }
+
+  /* Tables */
+  .slide__table {
+    font-size: 0.7rem;
+  }
+
+  .slide__table th {
+    font-size: 0.58rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .slide__table td {
+    padding: 0.4rem 0.5rem;
+  }
+
+  .slide__table td:last-child,
+  .slide__table th:last-child {
+    font-size: 0.68rem;
+  }
+
+  .slide__table--full td:first-child {
+    max-width: 160px;
+  }
+
+  .slide__table-note {
+    font-size: 0.62rem;
+  }
+
+  /* KPI row */
+  .slide__kpi-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    padding-top: 1rem;
+  }
+
+  .slide__kpi-value {
+    font-size: 0.95rem;
+  }
+
+  .slide__kpi-label {
+    font-size: 0.55rem;
+  }
+
+  /* Process steps */
+  .slide__process-step {
+    padding: 0.7rem;
+  }
+
+  .slide__process-num {
+    font-size: 0.58rem;
+  }
+
+  .slide__process-step strong {
+    font-size: 0.78rem;
+  }
+
+  .slide__process-step p {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+
+  .slide__process {
+    gap: 0.8rem;
+  }
+
+  /* Rarity tiers */
+  .slide__rarity-tier {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .slide__rarity-name {
+    font-size: 0.6rem;
+  }
+
+  .slide__rarity-source {
+    font-size: 0.72rem;
+  }
+
+  .slide__rarity-price {
+    font-size: 0.72rem;
+  }
+
+  .slide__rarity-avail {
+    font-size: 0.62rem;
+  }
+
+  .slide__rarity-note {
+    font-size: 0.65rem;
+  }
+
+  /* Ask */
+  .slide__ask {
+    margin: 1rem 0;
+  }
+
+  .slide__ask-amount {
+    margin-bottom: 1.5rem;
+  }
+
+  .slide__ask-amount .slide__big-num-value {
+    font-size: 2.2rem;
+  }
+
+  .slide__ask-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .slide__ask-item {
+    padding: 0.8rem;
+  }
+
+  .slide__ask-pct {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .slide__ask-use {
+    font-size: 0.65rem;
+  }
+
+  .slide__ask-terms {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .slide__ask-terms p {
+    font-size: 0.75rem;
+    line-height: 1.8;
+  }
+
+  /* Nav */
+  .deck-nav {
+    bottom: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    gap: 0.6rem;
+  }
+
+  .deck-nav__btn {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .deck-nav__counter {
+    font-size: 0.6rem;
+    min-width: 40px;
+  }
 }
